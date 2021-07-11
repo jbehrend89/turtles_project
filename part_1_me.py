@@ -93,15 +93,26 @@ def transform_daily_to_monthly(data):
             nest_pred += int(day[4])
 
         print([month, nests, hatched_nests, false_crawls, hit_rocks, nest_pred])
-
     return [month, nests, hatched_nests, false_crawls, hit_rocks, nest_pred]
 
 # 3. Complete the output_nests_per_month_graph function. 
 # You’ll need to use the list created from the transform_daily_to_monthly function to get the number of nests recorded per month.
+    #Ideas: 
+        # find x by nests / 5 then print string the number * X
+
+        # for ele in range(0, len(nests_oct)):
+        #     print(nests_oct[ele])
+        #     total = nests_oct + nests_oct[ele]
+        # print(f"Number of Nests recorded per month (X = 5 nests):") 
+        # print(f"October : {nests_oct}{total}")
+
 
 # 4. Complete the output_monthly_statistics function.
 
 # 5. Complete the output_overall_statistics function.
+    #Ideas:
+        # total = sum([sum(int(x)) for x in days])
+        # print(total)
 
 # Note: you can use the format_text function to create the columns in the text output.
 def format_text(text, spaces):
@@ -120,12 +131,11 @@ def format_text(text, spaces):
 if __name__ == "__main__":
     all_data = read_csv_file('data/2020_2021_turtle_data.csv')
     all_data.remove(all_data[0])
-    print(all_data)
+    #print(all_data)
+    print('2020/2021 Flatback Turtle Migration at Cemetery Beach')
+    print()
     monthly_data = transform_daily_to_monthly(all_data)
     print()
-    print(monthly_data)
+    #print(monthly_data)
 
-    #print('2020/2021 Flatback Turtle Migration at Cemetery Beach')
-    #print()
-
-
+    
